@@ -6,11 +6,12 @@ class Previewer {
     async getDevicePreview(url, deviceName) {
         const browser = await puppeteer.launch({ headless: true })
         const page = await browser.newPage()
-        const urlRegex = /.com\/.+/g
-        const fileName = `img/Device_${deviceName}_Page_${url.match(urlRegex)[0].substring(5).replace(/\//g, '_')}.png`
+        const urlRegex = /\w+.com\/*.*/g
         await page.emulate(puppeteer.devices[deviceName])
         await page.goto(url)
         await page.waitFor(10000)
+        const finalUrl = await page.evaluate('location.href')
+        const fileName = `img/Device=${deviceName},Page=${finalUrl.match(urlRegex)[0].replace(/\//g, '-').replace(/\./g, '_')}.png`
         await page.screenshot({ path: fileName, fullPage: true })
         await browser.close()
     }
