@@ -1,0 +1,1 @@
+All screenshots will be in this folder

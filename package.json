@@ -1,0 +1,33 @@
+{
+  "name": "chrome_mobile_previews",
+  "version": "1.0.0",
+  "description": "Get screenshot of how the website looks in all mobiles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rui-costa/chrome_mobile_previews.git"
+  },
+  "keywords": [
+    "mobile",
+    "preview",
+    "webpage"
+  ],
+  "author": "Rui Costa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rui-costa/chrome_mobile_previews/issues"
+  },
+  "homepage": "https://github.com/rui-costa/chrome_mobile_previews#readme",
+  "dependencies": {
+    "puppeteer": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  }
+}
