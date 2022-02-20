@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/rui-costa/chrome_mobile_previews#readme",
   "dependencies": {
-    "puppeteer": "^5.0.0"
+    "puppeteer": "^5.5.0"
   },
   "devDependencies": {
     "eslint": "^7.4.0",
